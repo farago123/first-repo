@@ -184,73 +184,71 @@
 # print x
 # puts
 
-class Student
+# class Student
     
-    def initialize(name, email, password)
-        @name = name
-        @email = email
-        @password = password
-    end
+#     def initialize(name, email, password)
+#         @name = name
+#         @email = email
+#         @password = password
+#     end
     
-    def signup
-        puts "Please enter an email for your new account."
-        @email = gets.chomp.downcase
-        puts "Please enter a corresponding password."
-        @password = gets.chomp.downcase
-        puts "Your account has been successfully created."
-    end    
+#     def signup
+#         puts "Please enter an email for your new account."
+#         @email = gets.chomp.downcase
+#         puts "Please enter a corresponding password."
+#         @password = gets.chomp.downcase
+#         puts "Your account has been successfully created."
+#     end    
     
-    def loginSuccessful
-        puts "Please enter your email."
-        email = gets.chomp.downcase
-        if email != @email
-           puts "Sorry, we don't recognize that email. Please sign up."
-           signup
-           return false
-        end   
-        puts "Please enter your password."
-        password = gets.chomp.downcase
+#     def loginSuccessful
+#         puts "Please enter your email."
+#         email = gets.chomp.downcase
+#         if email != @email
+#           puts "Sorry, we don't recognize that email. Please sign up."
+#           signup
+#           return false
+#         end   
+#         puts "Please enter your password."
+#         password = gets.chomp.downcase
         
-        if password == @password
-            puts "You have logged in successfully."
-            return true
-        else
-            puts "Incorrect password"
-            return false
-        end   
-    end
+#         if password == @password
+#             puts "You have logged in successfully."
+#             return true
+#         else
+#             puts "Incorrect password"
+#             return false
+#         end   
+#     end
     
-    def takeTest(exam)
-            numCorrect = 0
-            exam.each do |key, value|
-                puts key
-                if value == gets.chomp.capitalize
-                    puts "Correct!"
-                    numCorrect += 1
-                else
-                    puts "Sorry, that is incorrect. Correct answer: #{value}"
-                end
-            end
-            score = (numCorrect.to_f/exam.length.to_f)*100
+#     def takeTest(exam)
+#             numCorrect = 0
+#             exam.each do |key, value|
+#                 puts key
+#                 if value == gets.chomp.capitalize
+#                     puts "Correct!"
+#                     numCorrect += 1
+#                 else
+#                     puts "Sorry, that is incorrect. Correct answer: #{value}"
+#                 end
+#             end
+#             score = (numCorrect.to_f/exam.length.to_f)*100
             
-            if score < 60
-              puts "You failed this test with a score of #{score.round(2)}%. Would you like to take this test again?"
-              answer = gets.chomp.downcase
-              if answer == "yes"
-                  takeTest(exam)
-              end
-            else
-                puts "Congratulations, you passed this test with a score of #{score.round(2)}%!"
-            end
-    end    
-end
+#             if score < 60
+#               puts "You failed this test with a score of #{score.round(2)}%. Would you like to take this test again?"
+#               answer = gets.chomp.downcase
+#               if answer == "yes"
+#                   takeTest(exam)
+#               end
+#             else
+#                 puts "Congratulations, you passed this test with a score of #{score.round(2)}%!"
+#             end
+#     end    
+# end
 
-student = Student.new("Peter Farago", "faragopeter8@gmail.com", "nyuszkalacs")
-exam1 = {"Who is president of the U.S.?" => "Obama", 
-         "How many states are there in the U.S.?" => "50",
-         "What year was the declaration of independence signed?" => "1776"}
-loop do
-    break if student.loginSuccessful
-end    
-
-student.takeTest(exam1)
+# student = Student.new("Peter Farago", "faragopeter8@gmail.com", "nyuszkalacs")
+# exam1 = {"Who is president of the U.S.?" => "Obama", 
+#          "How many states are there in the U.S.?" => "50",
+#          "What year was the declaration of independence signed?" => "1776"}
+# loop do
+#     break if student.loginSuccessful
+# end    
