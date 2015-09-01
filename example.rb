@@ -247,8 +247,6 @@
 
 # student = Student.new("Peter Farago", "faragopeter8@gmail.com", "nyuszkalacs")
 # exam1 = {"Who is president of the U.S.?" => "Obama", 
-#          "How many states are there in the U.S.?" => "50",
-#          "What year was the declaration of independence signed?" => "1776"}
-# loop do
-#     break if student.loginSuccessful
+#          "H
+#     break if student.loginSucce
 # end    
